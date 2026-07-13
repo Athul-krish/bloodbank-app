@@ -41,17 +41,13 @@ const ViewDonor = () => {
 
               <thead className="table-dark">
                 <tr>
-                  <th>#</th>
                   <th>Donor Name</th>
                   <th>Age</th>
                   <th>Gender</th>
                   <th>Blood Group</th>
                   <th>Phone</th>
-                  <th>Email</th>
                   <th>City</th>
                   <th>Weight (kg)</th>
-                  <th>Last Donation</th>
-                  <th>Created At</th>
                 </tr>
               </thead>
 
@@ -59,17 +55,13 @@ const ViewDonor = () => {
                 {donors.length > 0 ? (
                   donors.map((donor, index) => (
                     <tr key={donor.id}>
-                      <td>{index + 1}</td>
                       <td>{donor.donor_name}</td>
                       <td>{donor.age}</td>
                       <td>{donor.gender}</td>
                       <td>{donor.blood_group}</td>
                       <td>{donor.phone}</td>
-                      <td>{donor.email || "N/A"}</td>
                       <td>{donor.city}</td>
                       <td>{donor.weight_kg}</td>
-                      <td>{donor.last_donation_date || "N/A"}</td>
-                      <td>{donor.created_at}</td>
                     </tr>
                   ))
                 ) : (
