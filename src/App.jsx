@@ -1,10 +1,12 @@
 import AddDonor from "./components/AddDonor"
+import ViewDonor from "./components/ViewDonor"
 
 
 function App() {
   return (
     <>
-    <AddDonor/>
+    {/* <AddDonor/> */}
+    <ViewDonor/>
     </>
   )
 }
