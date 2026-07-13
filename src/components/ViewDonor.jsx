@@ -12,10 +12,6 @@ const ViewDonor = () => {
 
     let url = "https://host-demo-app.onrender.com/api/donors";
 
-    if (bloodGroup !== "") {
-      url += `?blood_group=${bloodGroup}`;
-    }
-
     axios
       .get(url)
       .then((response) => {
@@ -37,29 +33,6 @@ const ViewDonor = () => {
       <Navbar />
 
       <div className="container mt-4">
-
-        <div className="row mb-3">
-          <div className="col-md-4">
-            <label className="form-label">Filter by Blood Group</label>
-
-            <select
-              className="form-control"
-              value={bloodGroup}
-              onChange={(e) => setBloodGroup(e.target.value)}
-            >
-              <option value="">All</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-            </select>
-          </div>
-        </div>
-
         {loading ? (
           <h3 className="text-center">Loading...</h3>
         ) : (
