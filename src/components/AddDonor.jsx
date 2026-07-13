@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 const AddDonor = () => {
   const [input, changeInput] = useState({
@@ -56,7 +57,7 @@ const AddDonor = () => {
 
   return (
     <div>
-
+        <Navbar/>
       <div className="container mt-4">
         <div className="row">
           <div className="col col-12">
@@ -87,35 +88,35 @@ const AddDonor = () => {
               <div className="col-md-6">
                 <label className="form-label">Gender</label>
                 <select
-                  className="form-control"
+                  className="form-select"
                   name="gender"
                   value={input.gender}
                   onChange={inputHandler}
                 >
                   <option value="">Select Gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div className="col-md-6">
                 <label className="form-label">Blood Group</label>
                 <select
-                  className="form-control"
+                  className="form-select"
                   name="blood_group"
                   value={input.blood_group}
                   onChange={inputHandler}
                 >
                   <option value="">Select Blood Group</option>
-                  <option>A+</option>
-                  <option>A-</option>
-                  <option>B+</option>
-                  <option>B-</option>
-                  <option>AB+</option>
-                  <option>AB-</option>
-                  <option>O+</option>
-                  <option>O-</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
                 </select>
               </div>
 
