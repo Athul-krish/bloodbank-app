@@ -5,7 +5,7 @@ import ViewDonor from "./components/ViewDonor"
 function App() {
   return (
     <>
-    {/* <AddDonor/> */}
+    <AddDonor/>
     <ViewDonor/>
     </>
   )
